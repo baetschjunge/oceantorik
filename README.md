@@ -1,8 +1,8 @@
-# Web-Prototype
+# oceantorik-webapp
 # this one is for our friend martin
 # made by b.b. & a.c.r.
 
-## Prototype Tool
+## oceantorik-prototype
 
 # - npm must be installed
 
