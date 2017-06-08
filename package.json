@@ -1,0 +1,29 @@
+{
+  "name": "oceantorik",
+  "version": "1.0.0",
+  "description": "this is just the beginning",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "b.b.",
+  "license": "",
+  "devDependencies": {
+    "browser-sync": "^2.14.3",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-bundle-assets": "^2.27.1",
+    "gulp-data": "^1.2.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-nunjucks-render": "^2.0.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-size": "^2.1.0",
+    "gulp-watch": "^4.3.9"
+  },
+  "dependencies": {
+    "jquery": "^3.1.0"
+  }
+}
