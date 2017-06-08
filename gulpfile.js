@@ -119,7 +119,7 @@ gulp.task('serve', ['watch'], function() {
 
   browserSync.init({
     reloadThrottle: 200,
-    reloadDelay: 500,
+    reloadDelay: 200,
     server: targetBasePath
   });
 
