@@ -9,8 +9,8 @@
 ```
 npm install
 gulp # einfacher build
-gulp watch # einfacher build + watcher auf scss, js und html
-gulp serve # wie gulp watch + browsersync
+gulp watch # easy build + watcher for scss, js and html
+gulp serve # gulp watch + browsersync
 ```
 
 # this project is using
