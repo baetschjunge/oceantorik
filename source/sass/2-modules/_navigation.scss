@@ -1,0 +1,24 @@
+$main-nav-height: 3em;
+$link-border: 3px;
+
+.main-nav {
+  height: $main-nav-height;
+  // @include display(flex);
+  display: block;
+
+}
+
+.menu {
+  @include display(flex);
+  @include flex-direction(row);
+  // @include justify-content(center);
+}
+
+.menu-item {
+  flex-grow: 1;
+  background-color: grey;
+  display: inline-block;
+  &.__link {
+
+  }
+}
