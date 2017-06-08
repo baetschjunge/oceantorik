@@ -126,6 +126,7 @@ gulp.task('serve', ['watch'], function() {
   // watches for bundled or rendered js files or nunjucks templates
   gulp.watch([
     targetBasePath + "/**/*.js",
-    targetBasePath + "/**/*.html"
+    targetBasePath + "/**/*.html",
+    targetBasePath + "/**/*.css"
   ]).on('change', browserSync.reload);
 });
