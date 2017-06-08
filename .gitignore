@@ -1,0 +1,5 @@
+# theres one more gitignore
+
+node-modules/
+target/
+*.DS_Store
