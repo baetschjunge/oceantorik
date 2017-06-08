@@ -1,0 +1,13 @@
+@mixin center {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include prefixer(box-align, center, webkit moz ms spec);
+  -ms-flex-align: center;
+  @include prefixer(align-items, center, webkit spec);
+  @include prefixer(box-pack, center, webkit moz);
+  -ms-flex-pack: center;
+  @include prefixer(justify-content, center, webkit spec);
+}

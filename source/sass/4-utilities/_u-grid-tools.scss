@@ -1,0 +1,171 @@
+
+// local variables
+$container_padding: 20px;
+
+
+
+// -- OVER ALL --  //
+.u-1\/1 {
+  //@include span-columns(12);
+  @include fill-parent;
+}
+.u-1\/3 {
+  @include span-columns(4);
+}
+.u-2\/3 {
+  @include span-columns(8);
+}
+.u-3\/4 {
+  @include span-columns(9);
+}
+.u-1\/4 {
+  @include span-columns(3);
+}
+
+.u-5\/6 {
+  @include span-columns(10);
+}
+.u-shift-1{
+  @include shift-in-context(1);
+}
+
+
+.u-container {
+  @include outer-container($max-width + 2*$container_padding);
+  @include padding(null $container_padding);
+}
+
+
+// container without padding
+.u-container--inner {
+  @include outer-container;
+}
+
+// more specificy needed
+.u-flex.u-flex {
+  @include display(flex);
+}
+
+
+// -- OVER ALL end --  //
+
+
+
+
+
+// -- Large-screen and higher -- //
+
+//@media screen and (min-width: 769px) {
+@include media ($large-screen-up) {
+  .u-1\/3\@lg\+ {
+    @include span-columns(4);
+  }
+  .u-2\/3\@lg\+ {
+    @include span-columns(8);
+  }
+  .u-3\/4\@lg\+ {
+    @include span-columns(9);
+  }
+  .u-1\/4\@lg\+ {
+    @include span-columns(3);
+  }
+
+  .u-1\/2\@lg\+ {
+    @include span-columns(6);
+  }
+
+  .u-5\/6\@lg\+ {
+    @include span-columns(10);
+  }
+
+
+
+  .u-shift-1\@lg\+{
+    @include shift-in-context(1);
+  }
+
+  .u-shift-1\/6\@lg\+{
+    @include shift-in-context(2);
+  }
+
+
+  .u-flex\@lg\+ {
+    @include display(flex);
+  }
+}
+// -- large-screen higher  end --  //
+
+
+
+// -- for large-screen lower -- //
+@include media($large-screen-lt) {
+
+  .u-flex\@lg\- {
+    @include display(flex);
+  }
+
+  .u-container\@lg\-{
+    @include outer-container($max-width + 2*$container_padding);
+    @include padding(null $container_padding);
+  }
+}
+// -- for large-screen lower  end -- //
+
+
+
+// -- hidden -- //
+.u-hidden-visually {
+  visibility: hidden;
+}
+
+
+@include media($large-screen-up) {
+  .u-hidden\@lg\+ {
+    display: none;
+  }
+}
+
+@include media($large-screen-lt) {
+  .u-hidden\@lg\- {
+    display: none;
+  }
+}
+
+@include media($medium-screen-up) {
+  .u-hidden\@md\+ {
+    display: none;
+  }
+}
+
+@include media($medium-screen-lt) {
+  .u-hidden\@md\- {
+    display: none;
+  }
+}
+
+
+@include media($medium-screen-2-lt) {
+  .u-hidden\@md2\- {
+    display: none;
+  }
+}
+// -- hidden ends -- //
+
+
+/*
+.u-flex\@end {
+  @include justify-content(flex-end);
+}
+
+.u-flex\@start {
+  @include justify-content(flex-start);
+}
+
+.u-flex\@center {
+  @include justify-content(center);
+}
+
+.u-flex\@betweetn {
+  @include justify-content(space-between);
+}
+*/

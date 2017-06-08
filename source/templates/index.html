@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <title>Prototype</title>
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+</head>
+
+<body>
+<!-- page header section -->
+<!-- end page header section -->
+
+<nav class="main-nav">
+  <ul class="menu">
+    <li class="menu-item"><a href="" class="menu-item__link"><span>Berlin</span></a></li>
+    <li class="menu-item"><a href="" class="menu-item__link"><span>Berlin</span></a></li>
+    <li class="menu-item"><a href="" class="menu-item__link"><span>Berlin</span></a></li>
+    <li class="menu-item"><a href="" class="menu-item__link"><span>Berlin</span></a></li>
+  </ul>
+</nav>
+
+
+<!-- page main section -->
+<main id="main"  class="u-container  ">
+    <section class="main-header">
+        <header class="main-header__header">
+            <h1>This is The First Prototype and its content</h1>
+        </header>
+    </section>
+
+    <article class="">
+      <p>this is a paragraph of an article?</p>
+    </article>
+
+    <article class="">
+        <h4 class="">another article with heading</h4>
+        <div class="">
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                Donec
+                quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+                pede justo.
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                Donec
+                quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+                pede justo.
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                Donec
+                quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+                pede justo.
+                Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper
+                nisi.
+                Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+                Aliquam lorem ante. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
+            </p>
+        </div>
+    </article>
+
+    {% for x in range(0, 4) %}
+    {% include "card.html" %}
+    {% endfor %}
+
+  </main>
+  <!-- end page main section -->
+  <div class="parent child">
+    <p class="parent">child 1</p>
+    <p class="child">child 1</p>
+    <p class="child">child 1</p>
+    <p class="child">child 1</p>
+    <p class="child">child 1</p>
+  </div>
+  <p class="off-p">off-p</p>
+  <p class="off-p">off-p</p>
+  <div class="parent-2">
+    <p class="child-2">child 2</p>
+  </div>
+
+  <!-- <button type="button" class="btn">button</button> -->
+  <button type="button" class="btn-disabled">disabled</button>
+  <button type="button" class="btn-success">cool</button>
+  <button type="button" class="btn-error">nope</button>
+
+<div class="break">*----------------------------------------------------------------------------------------*</div>
+
+<div class="grid">
+  <div class="grid-item">
+    <p class="module-text">yolo</p>
+    <a href="asfa">click me bitch</a>
+  </div>
+  <div class="grid-item">
+    <p class="module-text">swag</p>
+  </div>
+  <div class="grid-item">
+    <p class="module-text">spaghetti</p>
+  </div>
+  <div class="grid-item">
+    <p class="module-text">holocaust</p>
+  </div>
+</div>
+
+<!-- page footer -->
+{% include "footer.html" %}
+{{ bundleResult["js/main"]["scripts"] }}
+
+</body>
+</html>

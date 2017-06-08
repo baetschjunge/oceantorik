@@ -1,0 +1,81 @@
+/*------------------------------------*\
+#grid-settings
+#Breakpoints
+\*------------------------------------*/
+
+
+@import "../0-plugins/neat/neat-helpers";
+// see https://github.com/thoughtbot/neat for help
+
+
+// Neat Overrides
+// $column: 90px;
+// $gutter: 30px;
+// $grid-columns: 12;
+// $max-width: 1024px;
+
+
+// Breakpoint-sizes
+
+//$fixed-subnav-size: 1150px; // for fixed subnav
+//$fixed-bio-nav-size: 816px; // for fixed bio nav with alphabetic-order
+//$fixed-subnav-up: new-breakpoint(min-width $fixed-subnav-size);
+//$fixed-bio-nav-up: new-breakpoint(min-width $fixed-bio-nav-size);
+
+$medium-screen-size: 320px;  //phone
+$medium-screen-size-2: 520px;
+
+$large-screen-size: 768px;  //tablet-landscape
+$large-screen-size-2: 900px;
+
+$desktop-screen-size: 1100px;  //desktop (max width of grid)
+$desktop-screen-size-2: 1024px;
+
+
+
+
+
+//small screeen 0-320px
+$small-screen: new-breakpoint(max-width ($medium-screen-size - 1));
+// ----
+
+
+//medium screen
+$medium-screen-up: new-breakpoint(min-width $medium-screen-size);
+$medium-screen-lt: new-breakpoint(max-width ($medium-screen-size - 1));
+$medium-screen-2-lt: new-breakpoint(max-width ($medium-screen-size-2 - 1));
+$medium-screen-le: new-breakpoint(max-width $medium-screen-size);
+
+
+$medium-screen: new-breakpoint(min-width $medium-screen-size max-width ($large-screen-size - 1));
+$medium-screen-sub-1: new-breakpoint(min-width $medium-screen-size max-width ($medium-screen-size-2 - 1));
+$medium-screen-sub-2: new-breakpoint(min-width $medium-screen-size-2 max-width ($large-screen-size - 1));
+// ----
+
+
+// large screen ----
+$large-screen-up: new-breakpoint(min-width $large-screen-size);
+$large-screen-le: new-breakpoint(max-width $large-screen-size);
+$large-screen-lt: new-breakpoint(max-width ($large-screen-size - 1));
+
+$large-screen: new-breakpoint(min-width $large-screen-size max-width ($desktop-screen-size-2 - 1));
+
+$large-screen-sub-1: new-breakpoint(min-width $large-screen-size max-width ($large-screen-size-2 - 1));
+$large-screen-sub-2: new-breakpoint(min-width $large-screen-size-2 max-width ($desktop-screen-size-2 - 1));
+// ----
+
+
+//medium+large
+$medium-large-screen: new-breakpoint(min-width $medium-screen-size max-width ($desktop-screen-size-2 - 1));
+// ----
+
+
+//$desktop-screen: new-breakpoint(min-width $)
+$desktop-screen-2-up: new-breakpoint(min-width $desktop-screen-size-2);
+$desktop-screen-2-lt: new-breakpoint(max-width ($desktop-screen-size-2 - 1));
+
+
+$desktop-screen-up: new-breakpoint(min-width $desktop-screen-size);
+$desktop-screen-le: new-breakpoint(max-width $desktop-screen-size);
+$desktop-screen-lt: new-breakpoint(max-width ($desktop-screen-size - 1));
+// ----

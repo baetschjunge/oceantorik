@@ -1,0 +1,162 @@
+// @import 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700';
+// @import helveticaNeue from '../../assets/font/HelveticaNeue.dfont';
+
+// TODO this gets rendered in source/css thats why the path leads to the ROOT
+// the base font is acually used in _variables.scss as $base-font-family
+@font-face {
+  font-family: helveticaNeue;
+  src: url('../../../HelveticaNeue.dfont');
+}
+
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr
+ {
+	margin: 0 0 $small-spacing;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+//*:after, *:before { margin: 0;}
+
+h1 {
+  letter-spacing: 3px;
+  font-size: 32px;
+  font-weight: $regular;
+  color: $weiß;
+  line-height: 1.5;
+  //@include margin(0 null $small-spacing null);
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: $semibold;
+  color: $weiß;
+  //@include margin(0 null $small-spacing null);
+}
+
+h3 {
+  font-size: 26px;
+  font-weight: $regular;
+  color: $weiß;
+  //@include margin(0 null $small-spacing null);
+}
+
+h4 {
+  //word-break: break-all;
+  font-size: 30px;
+  font-weight: $semibold;
+  color: $violett;
+  line-height: 1.2;
+  //@include margin(0 null $small-spacing null);
+}
+
+h5 {
+  line-height: 30px;
+  font-size: 26px;
+  font-weight: $regular;
+  color: $violett;
+  //@include margin(0 null $small-spacing null);
+}
+
+h6 {
+  //font-family: $heading-font-family;
+  //font-size: modular-scale(1);
+  //line-height: $heading-line-height;
+  //margin: 0 0 $small-spacing;
+  font-size: 18px;
+  font-weight: $semibold;
+  color: $violett;
+  //@include margin(0 0 $small-spacing 0);
+}
+
+.style-10 {
+  font-size: 30px;
+  margin-bottom: 38px;
+  margin-top: 48px;
+}
+
+p {
+  margin: 0 0;
+}
+
+a {
+  color: $action-color;
+  text-decoration: none;
+  transition: color $base-duration $base-timing;
+
+  &:active,
+  &:focus,
+  &:hover {
+    //color: shade($action-color, 25%);
+    // get rid of active outline
+    outline: none;
+  }
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: $base-spacing 0;
+}
+
+
+
+/*
+  mobile view
+*/
+
+// TODO this should be for medium-screen too?
+@include media($large-screen-lt) {
+  body {
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 17px;
+  }
+
+  h3 {
+    font-size: 15px;
+    //line-height: 20px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  h5 {
+    font-size: 19px;
+    line-height: 20px;
+  }
+
+  h6 {
+    font-size: 15px;
+  }
+
+  p {
+    //margin: 0;
+  }
+
+}

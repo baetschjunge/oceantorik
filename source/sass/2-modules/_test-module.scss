@@ -1,0 +1,118 @@
+$main-nav-height: 3em;
+$link-border: 3px;
+
+.main-nav {
+  height: $main-nav-height;
+  //@include display(flex);
+  display: block;
+  background-color: grey;
+  //
+  //.menu {
+  //  width: 100%;
+  //  @include display(flex);
+  //  @include flex-direction(row);
+  //}
+  //
+  //.menu-item {
+  //  width: 100%;
+  //  display: inline-block;
+  //  text-align: center;
+  //  //padding: 8px;
+  //  padding: 0 10px;
+  //  padding: 10px 0;
+  //}
+  //
+  //.menu-item__link {
+  //  //padding: 4px;
+  //  //display: inline-block;
+  //  //font-size: 30px;
+  //  //font-weight: bold;
+  //  //line-height: calc(#{$main-nav-height} - #{$link-border});
+  //  height: $main-nav-height;
+  //  width: 100%;
+  //  text-align: center;
+  //  border-bottom: $link-border solid transparent;
+  //
+  //
+  //  &:hover {
+  //    border-bottom: $link-border solid black;
+  //  }
+  //
+  //  @include display(flex);
+  //  @include justify-content(center);
+  //  @include align-items(center);
+  //
+  //
+  //  > span {
+  //    display: block;
+  //    vertical-align: middle;
+  //  }
+  //}
+}
+
+//.parent .child {
+//  color: blue;
+//}
+//.parent .child {
+//  background-color: green;
+//}
+
+.parent{
+  > p + p + p {
+  background-color: red;
+  }
+}
+  //p ~ p {
+  //  background-color: blue;
+  //}
+//}
+
+//.parent{
+//  .child & {
+//    .child {
+//      color: white;
+//      display: flex;
+//    }
+//  }
+//}
+
+div .parent {
+  background-color: green;
+  @include outer-container;
+}
+
+/* -----------------------------------------------------------------------*/
+
+
+
+.break{
+  margin: 10em 0;
+}
+
+%outer{
+  max-width: 1200px;
+  @include margin(null auto);
+  display:flex;
+}
+
+%inner-item{
+  flex-basis: 24%;
+
+  .module-text{
+    background-color: $gold;
+    color: white;
+    //border: 1px solid black;
+  }
+}
+
+.grid{
+  @extend %outer;
+
+  .grid-item{
+    @extend %inner-item;
+  }
+
+  & > .grid-item + .grid-item{
+        margin-left:1%;
+      }
+}

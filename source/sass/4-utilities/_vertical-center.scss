@@ -1,0 +1,9 @@
+.u-vertical-center {
+  @include flex-direction(row);
+  @include align-content(center);
+  @include display(flex);
+  &__inner {
+    @include flex-grow(1);
+    @include align-self(center);
+  }
+}
