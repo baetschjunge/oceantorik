@@ -16,9 +16,21 @@ var nunjucksRender = require('gulp-nunjucks-render');
 var srcBasePath = __dirname + "/source";
 var targetBasePath = __dirname + "/target";
 
+
+/**
+ * gulp clean - clean target folder for new init
+ */
 gulp.task('clean', function (cb) {
   del.sync([targetBasePath + '/**'], cb);
 });
+
+/**
+ * generating local fonts for target
+ */
+ gulp.task('fonts', function() {
+   gulp.src(srcBasePath + '/assets/fonts/*')
+       .pipe(gulp.dest(targetBasePath + '/fonts/'));
+ });
 
 /**
  * This task generates CSS from all SCSS files and compresses them down.
@@ -42,11 +54,11 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest(basePathCss))
     .pipe(browserSync.stream())
-    // .pipe(notify({
-    //   title: "prototype: SASS Compiled",
-    //   message: "All SASS files have been recompiled to CSS.",
-    //   onLast: true
-    // }))
+    .pipe(notify({
+      title: "prototype: SASS Compiled",
+      message: "All SASS files have been recompiled to CSS.",
+      onLast: true
+    }))
     .pipe(size({
       title: 'SASS'
     }));
@@ -72,18 +84,6 @@ gulp.task('bundle', function () {
 
 });
 
-/**
- * Defines the watcher task.
- */
-gulp.task('watch', ['default'], function () {
-  gulp.watch([srcBasePath + '/sass/**/*.scss'], ['sass']);
-
-  gulp.watch([srcBasePath + '/assets/js/**/*.js'], ['bundle']);
-
-  gulp.watch([srcBasePath + '/**/*.html'], ['nunjucks']);
-
-});
-
 gulp.task('nunjucks', ['bundle'], function () {
   var bundleResultFilename = targetBasePath + "/bundle.result.json";
   var bundeResult = require(bundleResultFilename);
@@ -102,21 +102,40 @@ gulp.task('nunjucks', ['bundle'], function () {
       ]
     }))
     .pipe(gulp.dest(targetBasePath))
-    // .pipe(notify({
-    //   title: "title: nujucks",
-    //   message: "All nunjucks templates have been rendered and moved to target.",
-    //   onLast: true
-    // }))
+    .pipe(notify({
+      title: "title: nujucks",
+      message: "All nunjucks templates have been rendered and moved to target.",
+      onLast: true
+    }))
     .pipe(size({
       title: 'Nunjucks'
     }));
 });
 
-gulp.task('default', ['sass', 'bundle', 'nunjucks']);
 
-// Static Server + watching scss/html files
+/**
+ * gulp default task - just call 'gulp' in console
+ */
+gulp.task('default', ['fonts', 'sass', 'bundle', 'nunjucks']);
+
+/**
+ * Defines the gulp watcher task.
+ */
+gulp.task('watch', ['default'], function () {
+  gulp.watch([srcBasePath + '/sass/**/*.scss'], ['sass']);
+
+  gulp.watch([srcBasePath + '/assets/js/**/*.js'], ['bundle']);
+
+  gulp.watch([srcBasePath + '/**/*.html'], ['nunjucks']);
+
+});
+
+/**
+ *  gulp serve Static Server + watching scss/html files
+ */
 gulp.task('serve', ['watch'], function() {
 
+  // init browser snyc
   browserSync.init({
     reloadThrottle: 200,
     reloadDelay: 200,
