@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "this is just the beginning",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf node_modules"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/baetschjunge/oceantorik"
   },
-  "author": "b.b.",
+  "author": "b.b. & a.c.r.",
   "license": "",
   "devDependencies": {
     "browser-sync": "^2.14.3",
