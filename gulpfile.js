@@ -98,7 +98,10 @@ gulp.task('nunjucks', ['bundle'], function () {
       },
       path: [
         srcBasePath + '/templates',
-        srcBasePath + '/partials'
+        srcBasePath + '/partials',
+        srcBasePath + '/partials/components',
+        srcBasePath + '/partials/component-groups',
+        srcBasePath + '/partials/landmarks',
       ]
     }))
     .pipe(gulp.dest(targetBasePath))
