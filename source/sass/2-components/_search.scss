@@ -1,0 +1,29 @@
+$search-Height: 2rem;
+.search {
+  &__form {
+    display: flex;
+    &__input {
+      height: $search-Height;
+      margin-bottom: 0;
+    }
+    &__submit {
+      width: 3rem;
+      height: $search-Height;
+      background-color: $turkis;
+    }
+  }
+}
+
+// HACK get rid of base styling -> base styling must be refacored!
+.search {
+  .search__form__input, .search__form__submit {
+    border-radius: 0;
+  }
+
+  .search__form__input {
+    margin-bottom: 0;
+  }
+  .search__form__submit {
+    border-width: 0;
+  }
+}
