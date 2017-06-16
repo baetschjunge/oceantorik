@@ -1,0 +1,57 @@
+/** example code is just in one partial, its just demonstration **/
+.example-component-group {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.group-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.example-component {
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  background-color: $turkis-dark;
+}
+
+
+/* -----------------------------------------------------------------------*/
+
+
+
+.break{
+  margin: 10em 0;
+}
+
+%outer{
+  max-width: 1200px;
+  @include margin(null auto);
+  display:flex;
+}
+
+%inner-item{
+  flex-basis: 24%;
+
+  .module-text{
+    background-color: $gold;
+    color: white;
+    //border: 1px solid black;
+  }
+}
+
+.grid{
+  @extend %outer;
+
+  .grid-item{
+    @extend %inner-item;
+  }
+
+  & > .grid-item + .grid-item{
+        margin-left:1%;
+      }
+}
