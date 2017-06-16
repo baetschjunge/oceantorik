@@ -24,6 +24,18 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
+$ocean-black: #373736; // mostly font
+$ocean-white: #FFFFFF; // background n font
+$ocean-grey-bright: #FDFDFD; // background
+$ocean-red: #FF1939; // buttons
+$ocean-blue-dark-2: #0B4954; // font
+$ocean-blue-dark: #007F82; //used for gradiant-1
+$ocean-blue-bright: #006273; // used for gradiant-1
+$ocean-blue-bright-2: #006273; // used for gradiant-2
+$ocean-blue-dark-3: #007F82; // used for gradiant-2
+
+// old colors from prototype
+// ----
 $black:#000000;
 $weiß:#ffffff;
 $gold: #8c7659;
@@ -37,14 +49,15 @@ $turkis-dark: #1e9692;
 $turkis: #20a8a8;
 $breadcrumbturkis: #25c2c2;
 $textlinkturkis: #baefee;
+// ----
 
 // Font Colors
-$base-font-color: $black;
-$action-color: $weiß;
+$base-font-color: $ocean-black;
+$action-color: $ocean-white;
 
 // Border
-$base-border-color: $gold;
-$base-border: 1px solid $base-border-color;
+$base-border-color: $ocean-black; // old
+$base-border: 1px solid $ocean-black;
 
 // Background Colors
 $base-background-color: #fff;
