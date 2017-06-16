@@ -1,28 +1,13 @@
 /*------------------------------------*\
   # only minor layout components that are unique
-  # layout.scss
+  # landmarks.scss
 \*------------------------------------*/
 
+@import "header.scss";
+@import "footer.scss";
+@import "sidebar.scss";
 
-
-#header{
-  border: 1px solid black;
-}
-
-
-
+// will be removed later
 #main{
-  border: 1px solid black;
-}
-
-
-
-#sidebar {
-  border: 1px solid black;
-}
-
-
-
-#footer{
   border: 1px solid black;
 }
