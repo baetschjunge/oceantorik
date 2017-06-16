@@ -11,15 +11,10 @@
 <!-- page header section -->
 <!-- end page header section -->
 
-{% include "navigation.html" %}
+{% include "header.html" %}
 
 <!-- page main section -->
 <main id="main"  class="u-container  ">
-    <section class="main-header">
-        <header class="main-header__header">
-            <h1>This is The First Prototype and its content</h1>
-        </header>
-    </section>
 
     <article class="">
       <p>this is a paragraph of an article?</p>
@@ -52,32 +47,11 @@
         </div>
     </article>
 
-    {% for x in range(0, 4) %}
-    {% include "card.html" %}
-    {% endfor %}
+    {% include "example-component-group.html" %}
 
   </main>
-  <!-- end page main section -->
 
-  <!-- some testing
-  <div class="parent child">
-    <p class="parent">child 1</p>
-    <p class="child">child 1</p>
-    <p class="child">child 1</p>
-    <p class="child">child 1</p>
-    <p class="child">child 1</p>
-  </div>
-  <p class="off-p">off-p</p>
-  <p class="off-p">off-p</p>
-  <div class="parent-2">
-    <p class="child-2">child 2</p>
-  </div>
-
-
-  <button type="button" class="btn-disabled">disabled</button>
-  <button type="button" class="btn-success">cool</button>
-  <button type="button" class="btn-error">nope</button>
-
+<!-- grid testing
 
 <div class="grid">
   <div class="grid-item">
@@ -93,12 +67,10 @@
   <div class="grid-item">
     <p class="module-text">holocaust</p>
   </div>
-</div>
-
- some testing ends -->
+</div> -->
 
 <!-- page footer -->
-{% include "footer.html" %}
+<!-- {% include "footer.html" %} -->
 {{ bundleResult["js/main"]["scripts"] }}
 
 </body>

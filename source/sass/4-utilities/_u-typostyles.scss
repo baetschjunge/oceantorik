@@ -30,14 +30,14 @@ or in componentes
   font-size: 20px;
   line-height: 28px;
   font-weight: $regular;
-  color: $schwarz;
+  color: $black;
 }
 
 .text {
   font-size: 16px;
   font-weight: $regular;
   font-style: italic;
-  color: $schwarz;
+  color: $black;
   line-height: 25px;
 }
 
@@ -48,9 +48,9 @@ or in componentes
 
   font-size: 20px;
   font-weight: $semibold;
-  color: $linkturkis;
+  color: $black;
   &:hover {
-    color: $violett;
+    color: $black;
   }
   &:after {
     display: inline-block;
@@ -67,13 +67,13 @@ or in componentes
 }
 
 .marked-text-link {
-  color: $schwarz;
+  color: $black;
   //&:hover {
-  // @include linear-gradient(180deg, $weiß 47%, $textlinkturkis 53%);
-  //background-image: linear-gradient(to top,$weiß 0px,$weiß 4px,$textlinkturkis 5px,$weiß 100%);
-  @include linear-gradient(to top,$weiß 0px,$weiß 3px,$textlinkturkis 5px,$weiß 100%);
+  // @include linear-gradient(180deg, $weiß 47%, $textblack 53%);
+  //background-image: linear-gradient(to top,$weiß 0px,$weiß 4px,$textblack 5px,$weiß 100%);
+  @include linear-gradient(to top,$weiß 0px,$weiß 3px,$black 5px,$weiß 100%);
   background-position: 100px 50%;
-  color: $schwarz;
+  color: $black;
   //}
 }
 

@@ -59,7 +59,7 @@ h4 {
   //word-break: break-all;
   font-size: 30px;
   font-weight: $semibold;
-  color: $violett;
+  color: $black;
   line-height: 1.2;
   //@include margin(0 null $small-spacing null);
 }
@@ -68,7 +68,7 @@ h5 {
   line-height: 30px;
   font-size: 26px;
   font-weight: $regular;
-  color: $violett;
+  color: $black;
   //@include margin(0 null $small-spacing null);
 }
 
@@ -79,7 +79,7 @@ h6 {
   //margin: 0 0 $small-spacing;
   font-size: 18px;
   font-weight: $semibold;
-  color: $violett;
+  color: $black;
   //@include margin(0 0 $small-spacing 0);
 }
 
