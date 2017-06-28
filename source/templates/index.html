@@ -1,76 +1,81 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
-    <title>oceantorik</title>
-    <link rel="stylesheet" type="text/css" href="css/app.css">
-</head>
 
-<body>
-<!-- page header section -->
-<!-- end page header section -->
+  {% include "head.html" %}
 
-{% include "header.html" %}
+  <body>
 
-<!-- page main section -->
-<main id="main"  class="u-container  ">
+  <!-- page header section -->
+  <!-- end page header section -->
 
-    <article class="">
-      <p>this is a paragraph of an article?</p>
-    </article>
+  {% include "header.html" %}
 
-    <article class="">
-        <h4 class="">another article with heading</h4>
-        <div class="">
-            <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                Donec
-                quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
-                pede justo.
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                Donec
-                quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
-                pede justo.
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                Donec
-                quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
-                pede justo.
-                Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper
-                nisi.
-                Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                Aliquam lorem ante. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
-            </p>
-        </div>
-    </article>
-  </main>
+  <!-- page main section -->
+  <main id="main"  class="u-container  ">
 
-  {% include "example-component-group.html" %}
+      <article class="">
+        <p>this is a paragraph of an article?</p>
+      </article>
 
-<!-- grid testing
+      <article class="">
+          <h4 class="">another article with heading</h4>
+          <div class="">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                  Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                  Donec
+                  quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+                  pede justo.
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                  Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                  Donec
+                  quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+                  pede justo.
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                  Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                  Donec
+                  quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+                  pede justo.
+                  Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper
+                  nisi.
+                  Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+                  Aliquam lorem ante. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
 
-<div class="grid">
-  <div class="grid-item">
-    <p class="module-text">yolo</p>
-    <a href="asfa">click me bitch</a>
-  </div>
-  <div class="grid-item">
-    <p class="module-text">swag</p>
-  </div>
-  <div class="grid-item">
-    <p class="module-text">spaghetti</p>
-  </div>
-  <div class="grid-item">
-    <p class="module-text">holocaust</p>
-  </div>
-</div> -->
+              </p>
+              <div style="width: 50%; margin: 40px auto">
+                <h3 style="color: #1e9692"> Example Macro </h3>
+                <!-- Macros must be importet somewhere in html file, for making example clear, ill import it here -->
+                {% import 'example-macro.html' as exampleMacro %}
+                {{ exampleMacro.field('user') }}
+                {{ exampleMacro.field('password', type='password') }}
+            </div>
+          </div>
+      </article>
+    </main>
 
-<!-- page footer -->
-<!-- {% include "footer.html" %} -->
-{{ bundleResult["js/main"]["scripts"] }}
+    {% include "example-component-group.html" %}
 
-</body>
+  <!-- grid testing
+
+  <div class="grid">
+    <div class="grid-item">
+      <p class="module-text">yolo</p>
+      <a href="asfa">click me bitch</a>
+    </div>
+    <div class="grid-item">
+      <p class="module-text">swag</p>
+    </div>
+    <div class="grid-item">
+      <p class="module-text">spaghetti</p>
+    </div>
+    <div class="grid-item">
+      <p class="module-text">holocaust</p>
+    </div>
+  </div> -->
+
+  <!-- page footer -->
+  <!-- {% include "footer.html" %} -->
+  {{ bundleResult["js/main"]["scripts"] }}
+
+  </body>
 </html>

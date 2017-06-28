@@ -102,6 +102,7 @@ gulp.task('nunjucks', ['bundle'], function () {
         srcBasePath + '/partials/components',
         srcBasePath + '/partials/component-groups',
         srcBasePath + '/partials/landmarks',
+        srcBasePath + '/macros',
       ]
     }))
     .pipe(gulp.dest(targetBasePath))
