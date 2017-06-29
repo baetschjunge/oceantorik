@@ -8,6 +8,11 @@
   src: url('../../fonts/HelveticaNeue.dfont');
 }
 
+@font-face {
+  font-family: aleoBold;
+  src: url('../../fonts/aleo-bold-webfont.ttf');
+}
+
 body {
   color: $base-font-color;
   font-family: $base-font-family;
