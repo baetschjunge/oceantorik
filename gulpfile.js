@@ -12,6 +12,8 @@ var sourcemaps = require('gulp-sourcemaps');
 //var uglify = require('gulp-uglify');
 var nunjucksRender = require('gulp-nunjucks-render');
 //var fs = require("fs");
+var autoprefixer = require('gulp-autoprefixer');
+
 
 var srcBasePath = __dirname + "/source";
 var targetBasePath = __dirname + "/target";
@@ -35,6 +37,11 @@ gulp.task('clean', function (cb) {
 /**
  * This task generates CSS from all SCSS files and compresses them down.
  */
+
+var autoprefixerOptions = {
+  browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
+};
+
 gulp.task('sass', function () {
 
   var basePathCss = targetBasePath + '/css';
@@ -51,6 +58,7 @@ gulp.task('sass', function () {
       gutil.log(error);
       this.emit('end');
     })
+    .pipe(autoprefixer(autoprefixerOptions))
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest(basePathCss))
     .pipe(browserSync.stream())
