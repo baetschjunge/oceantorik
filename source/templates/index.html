@@ -55,6 +55,14 @@
 
     {% include "example-component-group.html" %}
 
+    <div style="display: flex; justify-content: space-between; max-width: 1024px; width: 1024px; margin: 100px auto;">
+      {% import 'card--picture.html' as card %}
+      {{ card.cardPicture('https://images.unsplash.com/photo-1487252502161-75020a813bf0?dpr=1&auto=format&fit=crop&w=1080&h=751&q=80&cs=tinysrgb&crop=&bg=') }}
+      {{ card.cardPicture('https://images.unsplash.com/photo-1476412555281-07839260e654?dpr=1&auto=format&fit=crop&w=1080&h=719&q=80&cs=tinysrgb&crop=&bg=') }}
+      {{ card.cardPicture('https://images.unsplash.com/reserve/unsplash_528b27288f41f_1.JPG?dpr=1&auto=format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=&bg=') }}
+      {{ card.cardPicture('https://images.unsplash.com/photo-1483911001049-ccd2c8148f9a?dpr=1&auto=format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=&bg=') }}
+    </div>
+
   <!-- grid testing
 
   <div class="grid">
