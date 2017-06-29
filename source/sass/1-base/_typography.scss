@@ -2,7 +2,7 @@
 // @import helveticaNeue from '../../assets/font/HelveticaNeue.dfont';
 
 // TODO this gets rendered in source/css thats why the path leads to the ROOT
-// the base font is acually used in _variables.scss as $base-font-family
+// the base font is acually used in _variables.scss as $primary-font-family
 @font-face {
   font-family: helveticaNeue;
   src: url('../../fonts/HelveticaNeue.dfont');
@@ -15,7 +15,7 @@
 
 body {
   color: $base-font-color;
-  font-family: $base-font-family;
+  font-family: $primary-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
 }
@@ -78,7 +78,7 @@ h5 {
 }
 
 h6 {
-  //font-family: $heading-font-family;
+  //font-family: $secondary-font-family;
   //font-size: modular-scale(1);
   //line-height: $heading-line-height;
   //margin: 0 0 $small-spacing;
