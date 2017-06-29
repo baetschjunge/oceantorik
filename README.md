@@ -28,3 +28,4 @@ Yeoman for generating Components
 ## Git
 
 # TODO
+install sass lint
