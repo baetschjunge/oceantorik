@@ -1,15 +1,27 @@
-//#{$all-buttons} {
-//  appearance: none;
-//  background-color: $action-color;
-//  border: 0;
-//  border-radius: $base-border-radius;
-//  color: #fff;
-//  cursor: pointer;
-//  display: inline-block;
-//  font-family: $primary-font-family;
-//  font-size: $base-font-size;
-//  -webkit-font-smoothing: antialiased;
-//  font-weight: 600;
+$button-height: rem(56px);
+$button-width: rem(320px);
+$button-border: rem(4px);
+
+#{$all-buttons} {
+  height: $button-height;
+  width: $button-width;
+  background-color: $ocean-red;
+  color: $ocean-white;
+  border-radius: $button-border;
+  display: inline-block;
+  font-family: $primary-font-family;
+  font-size: $medium-font-size;
+  font-weight: $bold;
+
+  box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.5);
+
+  // reset
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 0;
+
 //  line-height: 1;
 //  padding: $small-spacing $base-spacing;
 //  text-align: center;
@@ -34,4 +46,4 @@
 //      background-color: $action-color;
 //    }
 //  }
-//}
+}
