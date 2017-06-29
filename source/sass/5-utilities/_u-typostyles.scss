@@ -3,121 +3,60 @@ TODO: shouldn't be base as tag-definitions
 or in componentes
 */
 
-
 // background
-.bg-pattern--stroke {
-    background-image: url('');
-    background-repeat:repeat;
-    background-size: 15px;
-}
-
 .bg-pattern--mood {
   background-image: url('');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  /* background-color: #371a3a */
-  //background-repeat:repeat;
 }
-
-.bg-pattern--footer-head {
-  background-color: $warmweiß;
-}
-
 
 // font
 .intro {
   font-size: 20px;
   line-height: 28px;
   font-weight: $regular;
-  color: $black;
+  color: $ocean-black;
 }
 
 .text {
   font-size: 16px;
   font-weight: $regular;
   font-style: italic;
-  color: $black;
+  color: $ocean-black;
   line-height: 25px;
 }
 
-.link {
-  //aligns text and icon centered
-  @include display(flex);
-  @include align-items(center);
-
-  font-size: 20px;
-  font-weight: $semibold;
-  color: $black;
-  &:hover {
-    color: $black;
-  }
-  &:after {
-    display: inline-block;
-    content: '';
-    background-image: url('./../img/svg/img_arrow_link.svg');
-    background-size: 17px 17px;
-    @include size(17px 17px);
-    margin-left: 10px;
-  }
-  &:hover:after {
-    background-image: url('./../img/svg/img_arrow_link_hover.svg');
-    @include size(17px 17px)
-  }
-}
-
-.marked-text-link {
-  color: $black;
-  //&:hover {
-  // @include linear-gradient(180deg, $weiß 47%, $textblack 53%);
-  //background-image: linear-gradient(to top,$weiß 0px,$weiß 4px,$textblack 5px,$weiß 100%);
-  @include linear-gradient(to top,$weiß 0px,$weiß 3px,$black 5px,$weiß 100%);
-  background-position: 100px 50%;
-  color: $black;
-  //}
-}
-
-
-.breadcrumb {
-  font-size: 19px;
-  font-weight: $regular;
-  color: $breadcrumbturkis;
-
-  &:hover {
-    color: $weiß;
-  }
-}
+// .link {
+//   //aligns text and icon centered
+//   @include display(flex);
+//   @include align-items(center);
+//
+//   font-size: 20px;
+//   font-weight: $semibold;
+//   color: $black;
+//   &:hover {
+//     color: $black;
+//   }
+//   &:after {
+//     display: inline-block;
+//     content: '';
+//     background-image: url('./../img/svg/img_arrow_link.svg');
+//     background-size: 17px 17px;
+//     @include size(17px 17px);
+//     margin-left: 10px;
+//   }
+//   &:hover:after {
+//     background-image: url('./../img/svg/img_arrow_link_hover.svg');
+//     @include size(17px 17px)
+//   }
+// }
 
 .figure-caption {
   font-size: 14px;
   font-weight: $regular;
-  color: $gold;
+  color: $ocean-black;
 }
-
-
-
-.u-borderline-decoration {
-
-  padding-top: 24px;
-  background-color: white;
-
-  &--hideandcover {
-    padding-top: 0px;
-    border-top-width: 25px;
-    border-top-color: white;
-    border-top-style: solid;
-  }
-
-  &--gold {
-    border-top: 1px $gold solid;
-  }
-
-  &--no-top-pad { // pager
-    padding-top: 0px;
-    border-top: 1px $gold solid;
-  }
-}
-
 
 
 /*
