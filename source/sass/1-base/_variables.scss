@@ -1,6 +1,8 @@
 // Typography
-$primary-font-family: 'helveticaNeue';
+$primary-font-family: 'Lato', sans-serif;
 $secondary-font-family: 'aleoBold';
+$secondary-font-family: 'aleoBold';
+$tertiary-font-family: 'aleoItalic';
 
 @mixin rem($sizeValue: 1.6) {
   font-size: ($sizeValue * 10) + px;
@@ -8,19 +10,21 @@ $secondary-font-family: 'aleoBold';
 }
 
 // Font Sizes
-$base-font-size: rem(16);
+$base-font-size: rem(18);
+$medium-font-size: rem(24);
 
 // Font weight
+$light:300;
 $regular:400;
 $semibold:600;
 $bold:700;
 
 // Line height
-$base-line-height: 25px;
+$base-line-height: rem(24px);
 $heading-line-height: 1.2;
 
 // Other Sizes
-$base-border-radius: 3px;
+$base-border-radius: rem(3px);
 //$base-spacing: $base-line-height * 1em;
 $base-spacing: $base-line-height;
 $small-spacing: $base-spacing / 2;
@@ -36,23 +40,6 @@ $ocean-blue-dark: #007F82; //used for gradiant-1
 $ocean-blue-bright: #006273; // used for gradiant-1
 $ocean-blue-bright-2: #006273; // used for gradiant-2
 $ocean-blue-dark-3: #007F82; // used for gradiant-2
-
-// old colors from prototype
-// ----
-$black:#000000;
-$weiß:#ffffff;
-$gold: #8c7659;
-$footergold:#b6a48d;
-$warmgrau: #d1c8bd;
-$hellwarmgrau: #eeebe5;
-$warmweiß: #f6f6f5;
-$hellviolett: #bfadc2;
-$textlinkviolett: #d7ccd9;
-$turkis-dark: #1e9692;
-$turkis: #20a8a8;
-$breadcrumbturkis: #25c2c2;
-$textlinkturkis: #baefee;
-// ----
 
 // Font Colors
 $base-font-color: $ocean-black;
