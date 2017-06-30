@@ -27,7 +27,7 @@ textarea {
 
 #{$all-text-inputs} {
   appearance: none;
-  background-color: $base-background-color;
+  background-color: $primary-bg-color;
   border: $base-border;
   border-radius: $base-border-radius;
   box-shadow: $form-box-shadow;
@@ -48,7 +48,7 @@ textarea {
   }
 
   &:disabled {
-    background-color: shade($base-background-color, 5%);
+    background-color: shade($primary-bg-color, 5%);
     cursor: not-allowed;
 
     &:hover {
