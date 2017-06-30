@@ -6,6 +6,7 @@
 }
 
 // ------ linear gradient mixin
+// check https://www.sitepoint.com/building-linear-gradient-mixin-sass/
 @mixin linear-gradient($direction, $color-stops...) {
   // Direction has been omitted and happens to be a color-stop
   @if is-direction($direction) == false {
