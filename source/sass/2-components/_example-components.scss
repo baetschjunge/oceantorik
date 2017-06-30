@@ -24,6 +24,10 @@ h3 {
   font-family: aleoBold !important;
 }
 
+.linear-gradient-example {
+  @extend %ocean-linear-gradient;
+}
+
 
 /* -----------------------------------------------------------------------*/
 
