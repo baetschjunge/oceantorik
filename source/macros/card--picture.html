@@ -1,12 +1,13 @@
-{% macro cardPicture(url, sampleText="this pic is awesome") %}
 
-<div class="card-picture__wrapper">
-  <h5 class="card-picture__title">{{ name }}</h5>
-    <a href="#">
-      <div style="width: 180px; height: 180px; border-radius: 90px; background: url('{{ url }}') no-repeat center; background-size: cover;"></div>
+{% macro cardObj(picture) %}
+
+<div class="card-picture__wrapper" style="display: flex; flex-direction: column; align-items: center">
+    <a href="#" style="text-align: center;">
+      <div style="width: 180px; height: 180px; border-radius: 90px; background: url('{{ picture.url }}') no-repeat center; background-size: cover;"></div>
       <div style="margin-top: 20px">
     </a>
-    <p style="text-align: center;">{{ sampleText }}</p>
+    <h3 class="card-picture__title" style="text-align: center;">{{ picture.title }}</h5>
+    <p style="text-align: center;">{{ picture.text }}</p>
   </div>
 </div>
 
