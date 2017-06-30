@@ -30,11 +30,11 @@ $ocean-black: #373736; // mostly font
 $ocean-white: #FFFFFF; // background n font
 $ocean-grey-bright: #FDFDFD; // background
 $ocean-red: #FF1939; // buttons
-$ocean-blue-dark-2: #0B4954; // font
-$ocean-blue-dark: #007F82; //used for gradiant-1
-$ocean-blue-bright: #006273; // used for gradiant-1
-$ocean-blue-bright-2: #006273; // used for gradiant-2
-$ocean-blue-dark-3: #007F82; // used for gradiant-2
+$ocean-blue-dark-3: #0B4954; // font
+$ocean-blue-bright: #007F82; //used for gradiant-1
+$ocean-blue-dark: #006273; // used for gradiant-1
+$ocean-blue-bright-2: #007F82; // used for gradiant-2
+$ocean-blue-dark-2: #006273; // used for gradiant-2
 $ocean-transparent: transparent;
 
 // Font Colors
@@ -46,8 +46,19 @@ $base-border-color: $ocean-black; // old
 $base-border: 1px solid $ocean-black;
 
 // Background Colors
-$base-background-color: #fff;
-$secondary-background-color: tint($base-border-color, 75%);
+$primary-bg-color: $ocean-white;
+$secondary-bg-color: $ocean-grey-bright;
+
+// background gradients
+%ocean-linear-gradient {
+  @include linear-gradient(to right, $ocean-blue-dark, $ocean-blue-bright);
+}
+
+%linear-gradient-dark {
+  // in design its dark overlay
+  // TODO check how to implement
+  @include linear-gradient(to right, $ocean-blue-dark-2, $ocean-blue-bright-2);
+}
 
 // Forms
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
