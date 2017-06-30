@@ -13,6 +13,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var nunjucksRender = require('gulp-nunjucks-render');
 //var fs = require("fs");
 var autoprefixer = require('gulp-autoprefixer');
+var data = require('gulp-data');
 
 
 var srcBasePath = __dirname + "/source";
@@ -89,14 +90,21 @@ gulp.task('bundle', function () {
     .pipe(size({
       title: 'Bundle'
     }));
-
 });
 
+/**
+  * this taks defines the nunjucks rendering
+  * read from single json file
+  * TODO make read from serveral json files
+  */
 gulp.task('nunjucks', ['bundle'], function () {
   var bundleResultFilename = targetBasePath + "/bundle.result.json";
   var bundeResult = require(bundleResultFilename);
 
   return gulp.src(srcBasePath + '/templates/*.html')
+    .pipe(data(function() {
+      return require(srcBasePath + '/data/data.json');
+    }))
     .pipe(nunjucksRender({
       envOptions: {
         autoescape: false,
