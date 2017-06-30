@@ -5,8 +5,6 @@ $button-border: rem(4px);
 #{$all-buttons} {
   height: $button-height;
   width: $button-width;
-  background-color: $ocean-red;
-  color: $ocean-white;
   border-radius: $button-border;
   display: inline-block;
   font-family: $primary-font-family;
@@ -17,7 +15,6 @@ $button-border: rem(4px);
 
   // reset
   appearance: none;
-  border: 0;
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 0;
@@ -27,7 +24,7 @@ $button-border: rem(4px);
 //  text-align: center;
 //  text-decoration: none;
 //  transition: background-color $base-duration $base-timing;
-//  user-select: none;
+  user-select: none;
 //  vertical-align: middle;
 //  white-space: nowrap;
 //
@@ -46,4 +43,16 @@ $button-border: rem(4px);
 //      background-color: $action-color;
 //    }
 //  }
+}
+
+.button--red {
+  background-color: $ocean-red;
+  color: $ocean-white;
+  border: 0;
+}
+
+.button--transparent {
+  background-color: $ocean-transparent;
+  color: $ocean-white;
+  border: 4px solid $ocean-white ;
 }
