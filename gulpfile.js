@@ -28,12 +28,20 @@ gulp.task('clean', function (cb) {
 });
 
 /**
- * generating local fonts for target
+ * simple generating local fonts for target
  */
  gulp.task('fonts', function() {
    gulp.src(srcBasePath + '/assets/fonts/*')
-       .pipe(gulp.dest(targetBasePath + '/fonts/'));
+       .pipe(gulp.dest(targetBasePath + '/assets/fonts/'));
  });
+
+ /**
+  * simple generating imgs from src to tgt
+  */
+  gulp.task('images', function() {
+    gulp.src(srcBasePath + '/assets/img/**/*')
+        .pipe(gulp.dest(targetBasePath + '/assets/img/'));
+  });
 
 /**
  * This task generates CSS from all SCSS files and compresses them down.
@@ -136,7 +144,7 @@ gulp.task('nunjucks', ['bundle'], function () {
 /**
  * gulp default task - just call 'gulp' in console
  */
-gulp.task('default', ['fonts', 'sass', 'bundle', 'nunjucks']);
+gulp.task('default', ['fonts', 'images', 'sass', 'bundle', 'nunjucks']);
 
 /**
  * Defines the gulp watcher task.

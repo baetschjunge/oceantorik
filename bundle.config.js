@@ -35,13 +35,14 @@ module.exports = {
             }
         },
 
-    },
-    copy: [
-        {
-            base: './source/assets',
-            src: [
-                './source/assets/img/**/*.{jpg,png,svg}'
-            ]
-        }
-    ]
+    }
+    // ,
+    // copy: [
+    //     {
+    //         base: './source/assets',
+    //         src: [
+    //             './source/assets/img/**/*.{jpg,png,svg}'
+    //         ]
+    //     }
+    // ]
 };
