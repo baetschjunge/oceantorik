@@ -51,11 +51,18 @@
     <article style="max-width: 1024px; width: 1024px; margin: 100px auto;">
       <h3 style="color: #1e9692; margin-bottom: 50px;">Example Macro List</h3>
       <div style="display: flex; justify-content: space-between;">
+
         {% import 'card--picture.html' as card %}
-        {{ card.cardPicture('https://images.unsplash.com/photo-1487252502161-75020a813bf0?dpr=1&auto=format&fit=crop&w=1080&h=751&q=80&cs=tinysrgb&crop=&bg=') }}
-        {{ card.cardPicture('https://images.unsplash.com/photo-1476412555281-07839260e654?dpr=1&auto=format&fit=crop&w=1080&h=719&q=80&cs=tinysrgb&crop=&bg=') }}
-        {{ card.cardPicture('https://images.unsplash.com/reserve/unsplash_528b27288f41f_1.JPG?dpr=1&auto=format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=&bg=') }}
-        {{ card.cardPicture('https://images.unsplash.com/photo-1483911001049-ccd2c8148f9a?dpr=1&auto=format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=&bg=') }}
+        {#
+          {% set pic = {{ picture.title }} %}
+          <p>pic</p>
+          {{ pictures | dump | safe }}
+        #}
+
+        {% for picture in pictures %}
+        {{ card.cardObj(picture) }}
+        {% endfor %}
+
       </div>
     </article>
 
