@@ -4,11 +4,6 @@ $secondary-font-family: 'aleoBold';
 $secondary-font-family: 'aleoBold';
 $tertiary-font-family: 'aleoItalic';
 
-@mixin rem($sizeValue: 1.6) {
-  font-size: ($sizeValue * 10) + px;
-  font-size: $sizeValue + rem;
-}
-
 // Font Sizes
 $base-font-size: rem(18);
 $medium-font-size: rem(24);
