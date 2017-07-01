@@ -14,8 +14,25 @@
 
   {% include "header.html" %}
 
+  <article class="u-container-grid">
+    <h3 style="color: #1e9692; margin-bottom: 50px;">example macro list</h3>
+    <div style="display: flex; justify-content: space-between;">
+      {# to display all variables -> {{ pictures | dump | safe }} #}
+      {% import 'card--picture.html' as card %}
+      {% for picture in pictures %}
+      {{ card.cardObj(picture) }}
+      {% endfor %}
+    </div>
+  </article>
+
+  <article style="max-width: 1024px; width: 1024px; margin: 100px auto;">
+    <button class="button--red">FIND US</button>
+    <button class="button--transparent">FIND US</button>
+  </article>
+
+
   <!-- page main section -->
-  <main id="main"  class="u-container  linear-gradient-example">
+  <main id="main"  class="u-container-grid  linear-gradient-example">
 
       <article class="">
         <p>this is a paragraph of an article?</p>
@@ -47,29 +64,6 @@
     </main>
 
     {% include "example-component-group.html" %}
-
-    <article style="max-width: 1024px; width: 1024px; margin: 100px auto;">
-      <h3 style="color: #1e9692; margin-bottom: 50px;">Example Macro List</h3>
-      <div style="display: flex; justify-content: space-between;">
-
-        {% import 'card--picture.html' as card %}
-        {#
-          {% set pic = {{ picture.title }} %}
-          <p>pic</p>
-          {{ pictures | dump | safe }}
-        #}
-
-        {% for picture in pictures %}
-        {{ card.cardObj(picture) }}
-        {% endfor %}
-
-      </div>
-    </article>
-
-    <article style="max-width: 1024px; width: 1024px; margin: 100px auto;">
-      <button class="button--red">FIND US</button>
-      <button class="button--transparent">FIND US</button>
-    </article>
 
   <!-- grid testing
 
