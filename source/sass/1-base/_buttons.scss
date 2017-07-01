@@ -1,8 +1,21 @@
 $button-height: rem(56px);
 $button-width: rem(320px);
 $button-border: rem(4px);
+$icon-height: rem(18px);
+$icon-width: rem(18px);
 
-#{$all-buttons} {
+button {
+  // reset
+  appearance: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 0;
+  user-select: none;
+  box-shadow: none;
+  border: none;
+}
+
+button:not(.button--nav):not(.button--icon) {
   height: $button-height;
   width: $button-width;
   border-radius: $button-border;
@@ -10,21 +23,13 @@ $button-border: rem(4px);
   font-family: $primary-font-family;
   font-size: $medium-font-size;
   font-weight: $bold;
-
   box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.5);
-
-  // reset
-  appearance: none;
-  cursor: pointer;
-  -webkit-font-smoothing: antialiased;
-  padding: 0;
-
 //  line-height: 1;
-//  padding: $small-spacing $base-spacing;
+//  padding: $half-base-spacing $base-spacing;
 //  text-align: center;
 //  text-decoration: none;
 //  transition: background-color $base-duration $base-timing;
-  user-select: none;
+
 //  vertical-align: middle;
 //  white-space: nowrap;
 //
@@ -55,4 +60,19 @@ $button-border: rem(4px);
   background-color: $ocean-transparent;
   color: $ocean-white;
   border: 4px solid $ocean-white ;
+}
+
+.button--nav {
+  background-color: transparent;
+}
+
+.button--icon {
+  height: $icon-height;
+  width: $icon-width;
+}
+
+.button--lang {
+  color: $ocean-white;
+  font-size: rem(18px);
+  text-align: center;
 }
