@@ -1,4 +1,34 @@
 
+
+
+
+// may be moved
+// --------- grid-helpers
+$breakpoints: (
+    "phone":        400px,
+    "phone-wide":   480px,
+    "phablet":      560px,
+    "tablet-small": 640px,
+    "tablet":       768px,
+    "tablet-wide":  1024px,
+    "desktop":      1248px,
+    "desktop-wide": 1440px
+);
+
+
+@mixin mq($type-max, $breakpoint-max, $type-min, $breakpoint-min) {
+  @if map_has_key($breakpoints, $breakpoint-max) and map_has_key($breakpoints, $breakpoint-min) {
+    $breakpoint-min: map_get($breakpoints, $breakpoint-min);
+    $breakpoint-max: map_get($breakpoints, $breakpoint-max);
+    // @if $type-max == max {
+    $breakpoint-max: $breakpoint-max - 1px;
+    // }
+    @media only screen and (#{$type-min}-width: $breakpoint-max) and (#{$type-max}-width: $breakpoint-min) {
+      @content;
+    }
+  }
+}
+
 $container-padding: rem(24px);
 $grid-width: rem(map-get($breakpoints, desktop));
 
