@@ -1,0 +1,71 @@
+<article class="u-container-grid">
+  <h3 style="color: #1e9692; margin-bottom: 50px;">example macro list</h3>
+  <div style="display: flex; justify-content: space-between;">
+    {# to display all variables -> {{ pictures | dump | safe }} #}
+    {% import 'card--picture.html' as card %}
+    {% for picture in pictures %}
+    {{ card.cardObj(picture) }}
+    {% endfor %}
+  </div>
+</article>
+
+<article style="max-width: 1024px; width: 1024px; margin: 100px auto;">
+  <button class="button--red">FIND US</button>
+  <button class="button--transparent">FIND US</button>
+</article>
+
+
+<!-- page main section -->
+<main id="main"  class="u-container-grid  linear-gradient-example">
+
+    <article class="">
+      <p>this is a paragraph of an article?</p>
+    </article>
+
+    <article class="">
+        <h4 class="">another article with heading</h4>
+        <div class="">
+            <p>
+                <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</strong> Aenean commodo ligula eget dolor.
+                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+                pede justo.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+                pede justo. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                Aenean massa.
+
+            </p>
+            <div style="width: 50%; margin: 40px auto">
+              <h3 style="color: #1e9692"> Example Macro </h3>
+              <!-- Macros must be importet somewhere in html file, for making example clear, ill import it here -->
+              {% import 'example-macro.html' as exampleMacro %}
+              {{ exampleMacro.field('user') }}
+              {{ exampleMacro.field('password', type='password') }}
+          </div>
+        </div>
+    </article>
+  </main>
+
+  {% include "example-component-group.html" %}
+
+<!-- grid testing
+
+<div class="grid">
+  <div class="grid-item">
+    <p class="module-text">yolo</p>
+    <a href="asfa">click me bitch</a>
+  </div>
+  <div class="grid-item">
+    <p class="module-text">swag</p>
+  </div>
+  <div class="grid-item">
+    <p class="module-text">spaghetti</p>
+  </div>
+  <div class="grid-item">
+    <p class="module-text">holocaust</p>
+  </div>
+</div> -->
+
+<!-- page footer -->
+<!-- {% include "footer.html" %} -->
