@@ -1,51 +1,52 @@
-fieldset {
-  background-color: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
+// fieldset {
+//   background-color: transparent;
+//   border: 0;
+//   margin: 0;
+//   padding: 0;
+// }
+//
+// legend {
+//   font-weight: 600;
+//   margin-bottom: $half-base-spacing / 2;
+//   padding: 0;
+// }
+//
+// label {
+//   display: block;
+//   font-weight: 600;
+//   margin-bottom: $half-base-spacing / 2;
+// }
+//
+// input,
+// select,
+// textarea {
+//   display: block;
+//   font-family: $primary-font-family;
+//   font-size: $base-font-size;
+// }
 
-legend {
-  font-weight: 600;
-  margin-bottom: $small-spacing / 2;
-  padding: 0;
-}
+%search-border {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: rem(2px) solid $ocean-white;
+  // border-width: rem(2px);
+  // border-color: $ocean-white;
 
-label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: $small-spacing / 2;
-}
-
-input,
-select,
-textarea {
-  display: block;
-  font-family: $primary-font-family;
-  font-size: $base-font-size;
+  border-radius: none;
 }
 
 #{$all-text-inputs} {
+  @extend %search-border;
   appearance: none;
-  background-color: $primary-bg-color;
-  border: $base-border;
-  border-radius: $base-border-radius;
-  box-shadow: $form-box-shadow;
+  background-color: $ocean-transparent;
+  // border: $base-border;
+  // border-radius: $base-border-radius;
+  // box-shadow: $form-box-shadow;
   box-sizing: border-box;
-  margin-bottom: $small-spacing;
-  padding: $base-spacing / 3;
-  transition: border-color $base-duration $base-timing;
-  width: 100%;
-
-  &:hover {
-    border-color: shade($base-border-color, 20%);
-  }
-
-  &:focus {
-    //border-color: $action-color;
-    //box-shadow: $form-box-shadow-focus;
-    outline: none;
-  }
+  margin-bottom: 0;
+  // padding: $base-spacing / 3;
+  // transition: border-color $base-duration $base-timing;
 
   &:disabled {
     background-color: shade($primary-bg-color, 5%);
@@ -61,22 +62,22 @@ textarea {
   }
 }
 
-textarea {
-  resize: vertical;
-}
+// textarea {
+//   resize: vertical;
+// }
 
-[type="checkbox"],
-[type="radio"] {
-  display: inline;
-  margin-right: $small-spacing / 2;
-}
-
-[type="file"] {
-  margin-bottom: $small-spacing;
-  width: 100%;
-}
-
-select {
-  margin-bottom: $small-spacing;
-  width: 100%;
-}
+// [type="checkbox"],
+// [type="radio"] {
+//   display: inline;
+//   margin-right: $half-base-spacing / 2;
+// }
+//
+// [type="file"] {
+//   margin-bottom: $half-base-spacing;
+//   width: 100%;
+// }
+//
+// select {
+//   margin-bottom: $half-base-spacing;
+//   width: 100%;
+// }
