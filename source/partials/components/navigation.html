@@ -1,6 +1,20 @@
 <nav class="main-nav">
-  <ul class="menu">
-    <li class="menu-item"><a href="" class="menu-item__link"><span>Home</span></a></li>
+  <div class="nav-bar">
+    <div class="controls">
+      <button class="button--nav  button--icon  icon--burger"></button>
+      {% include "search.html" %}
+    </div>
+    <!-- <span class="page-title">oceantorik</span> -->
+    <span class="page-title">都歷海洋教室</span>
+    <div class="lang">
+      <button class="button--nav  button--lang  lang__ping-fang">中文</button>
+      <span class="lang__devider">|</span>
+      <button class="button--nav  button--lang  lang__english">EN</button>
+    </div>
+  </div>
+
+  <ul class="nav-menu  menu  menu--closed">
+    <li class="menu-item"><a href="" class="menu-item__link"><span>HOME</span></a></li>
     <li class="menu-item"><a href="" class="menu-item__link"><span>BOARDS</span></a></li>
     <li class="menu-item"><a href="" class="menu-item__link"><span>FOOD</span></a></li>
     <li class="menu-item"><a href="" class="menu-item__link"><span>SWAG</span></a></li>
