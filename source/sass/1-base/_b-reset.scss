@@ -13,6 +13,13 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+
+}
+
+* {
+  &:focus, &:active {
+    outline: none;
+  }
 }
 
 html,
