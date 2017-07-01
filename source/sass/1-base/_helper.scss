@@ -5,6 +5,19 @@
   font-size: $sizeValue + rem;
 }
 
+// mixin ti display images in retina res on retina displays
+@mixin retina-img($image, $width, $height) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+         (-o-min-device-pixel-ratio: 2.6/2),
+         (-webkit-min-device-pixel-ratio: 1.3),
+         (min-device-pixel-ratio: 1.3),
+         (min-resolution: 1.3dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url($image);
+    background-size: $width $height;
+  }
+}
+
 // ------ linear gradient mixin
 // check https://www.sitepoint.com/building-linear-gradient-mixin-sass/
 @mixin linear-gradient($direction, $color-stops...) {
