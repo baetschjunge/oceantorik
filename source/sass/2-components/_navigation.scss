@@ -72,17 +72,11 @@ $link-border: 3px;
   background: url('../../../assets/img/svg/burger-icon.svg') no-repeat center; background-size: cover;
 }
 
-// @include mq(phone, tablet, max, min) {
+// @include mq(max, phone, min, tablet) {
 //   .main-nav {
 //     background-color: $ocean-red;
 //   }
 // }
-
-@include mq(max, phone, min, tablet) {
-  .main-nav {
-    background-color: $ocean-red;
-  }
-}
 
 // @include mq(tablet) {
 //   .main-nav {
