@@ -1,8 +1,6 @@
-
-// local variables
-$container_padding: 20px;
-
-
+.u-container-grid {
+  @include container-grid;
+}
 
 // -- OVER ALL --  //
 .u-1\/1 {
