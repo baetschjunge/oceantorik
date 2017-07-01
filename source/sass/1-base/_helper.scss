@@ -1,4 +1,22 @@
 
+$container-padding: rem(24px);
+$grid-width: rem(map-get($breakpoints, desktop));
+
+@mixin container-padding(){
+  padding-right: $container-padding;
+  padding-left: $container-padding;
+}
+
+@mixin container-grid(){
+  max-width: $grid-width;
+  width: $grid-width + 2*$container-padding;
+  margin: 0 auto;
+  @include container-padding;
+}
+// -------
+
+
+
 // calc rem from pixel mixin
 @mixin rem($sizeValue: 1.6) {
   font-size: ($sizeValue * 10) + px;
