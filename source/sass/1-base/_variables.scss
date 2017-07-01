@@ -3,6 +3,7 @@ $primary-font-family: 'Lato', sans-serif;
 $secondary-font-family: 'aleoBold';
 $secondary-font-family: 'aleoBold';
 $tertiary-font-family: 'aleoItalic';
+$ping-fang-sc-medium: 'pingFangSCMedium';
 
 // Font Sizes
 $base-font-size: rem(18);
@@ -22,7 +23,7 @@ $heading-line-height: 1.2;
 $base-border-radius: rem(3px);
 //$base-spacing: $base-line-height * 1em;
 $base-spacing: $base-line-height;
-$small-spacing: $base-spacing / 2;
+$half-base-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors

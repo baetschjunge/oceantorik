@@ -20,6 +20,11 @@
   src: url('../../assets/fonts/aleo-italic-webfont.ttf');
 }
 
+@font-face {
+  font-family: pingFangSCMedium;
+  src: url('../../assets/fontsPingFang.ttc');
+}
+
 body {
   color: $base-font-color;
   font-family: $primary-font-family;
