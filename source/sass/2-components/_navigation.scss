@@ -80,7 +80,7 @@ $link-border: 3px;
 //   }
 // }
 //
-// // // test max -> mq till max value
+// // test max -> mq till max value
 // @include media-query(max, phone) {
 //   .main-nav {
 //     background-color: $ocean-black;
@@ -89,6 +89,13 @@ $link-border: 3px;
 //
 // // test max -> mq from min value
 // @include media-query(min, tablet) {
+//   .main-nav {
+//     background-color: pink;
+//   }
+// }
+
+// // test error log
+// @include media-query() {
 //   .main-nav {
 //     background-color: pink;
 //   }
