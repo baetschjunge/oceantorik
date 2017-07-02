@@ -62,10 +62,11 @@ gulp.task('sass', function () {
       // outputStyle: "compressed",
       lineNumbers: false,
       loadPath: basePathCss + '/*',
-      sourceMap: true
+      sourceMap: true,
     })).on('error', function (error) {
       gutil.log(error);
       this.emit('end');
+      return notify().write(error);
     })
     .pipe(autoprefixer(autoprefixerOptions))
     .pipe(sourcemaps.write('./maps'))
