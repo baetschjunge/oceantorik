@@ -1,9 +1,5 @@
 
-
-
-
-// may be moved
-// --------- grid-helpers
+// breakpoint map
 $breakpoints: (
     "phone":        400px,
     "phone-wide":   480px,
@@ -15,20 +11,49 @@ $breakpoints: (
     "desktop-wide": 1440px
 );
 
+// min -> min breakpoint -> max -> max breakpoint
+@mixin media-query($type-one: null, $breakpoint-one: null, $type-two: null, $breakpoint-two: null) {
+  // if mq from min and till max value
+  @if $type-one == min and map_has_key($breakpoints, $breakpoint-one) and
+      $type-two == max and map_has_key($breakpoints, $breakpoint-two) {
 
-@mixin mq($type-max, $breakpoint-max, $type-min, $breakpoint-min) {
-  @if map_has_key($breakpoints, $breakpoint-max) and map_has_key($breakpoints, $breakpoint-min) {
-    $breakpoint-min: map_get($breakpoints, $breakpoint-min);
-    $breakpoint-max: map_get($breakpoints, $breakpoint-max);
-    // @if $type-max == max {
+    $type-min: $type-one;
+    $type-max: $type-two;
+
+    $breakpoint-min: map_get($breakpoints, $breakpoint-one);
+    $breakpoint-max: map_get($breakpoints, $breakpoint-two);
+
     $breakpoint-max: $breakpoint-max - 1px;
-    // }
-    @media only screen and (#{$type-min}-width: $breakpoint-max) and (#{$type-max}-width: $breakpoint-min) {
+
+    @warn $type-min, $breakpoint-min, $type-max, $breakpoint-max;
+    @media only screen and (#{$type-min}-width: $breakpoint-min) and (#{$type-max}-width: $breakpoint-max) {
+      @content;
+    }
+  }
+  // mq from 0 till max value
+  @else if $type-one == min and map_has_key($breakpoints, $breakpoint-one) {
+    $type-min: $type-one;
+    $breakpoint-min: map_get($breakpoints, $breakpoint-one);
+
+    @warn $type-min, $breakpoint-min;
+    @media only screen and (#{$type-min}-width: $breakpoint-min) {
+      @content;
+    }
+  }
+  // mq from min value up ∞
+  @else if $type-one == max and map_has_key($breakpoints, $breakpoint-one) {
+    $type-max: $type-one;
+    $breakpoint-max: map_get($breakpoints, $breakpoint-one);
+
+    @warn $type-max, $breakpoint-max;
+    @media only screen and (#{$type-max}-width: $breakpoint-max) {
       @content;
     }
   }
 }
 
+// may be moved
+// --------- grid-helpers
 $container-padding: rem(24px);
 $grid-width: rem(map-get($breakpoints, desktop));
 

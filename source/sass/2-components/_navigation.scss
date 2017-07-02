@@ -72,26 +72,24 @@ $link-border: 3px;
   background: url('../assets/img/svg/burger-icon.svg') no-repeat center; background-size: cover;
 }
 
-// @include mq(max, phone, min, tablet) {
-//   .main-nav {
-//     background-color: $ocean-red;
-//   }
-// }
 
-// @include mq(tablet) {
-//   .main-nav {
-//     background-color: $ocean-red;
-//   }
-// }
+// test min and max -> mq from min and till max value
+@include media-query(min, phone, max, tablet) {
+  .main-nav {
+    background-color: $ocean-red;
+  }
+}
 
-// @media only screen and (max-width: 768px) {
-//     .main-nav {
-//       background-color: $ocean-red;
-//     }
-// }
-//
-// @media only screen and (max-width: 768px) and (min-width: 400px) {
-//       .main-nav {
-//         background-color: $ocean-red;
-//       }
-// }
+// // test max -> mq till max value
+@include media-query(max, phone) {
+  .main-nav {
+    background-color: $ocean-black;
+  }
+}
+
+// test max -> mq from min value
+@include media-query(min, tablet) {
+  .main-nav {
+    background-color: pink;
+  }
+}
