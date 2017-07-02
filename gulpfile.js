@@ -1,3 +1,7 @@
+/*
+  use: https://github.com/isaacs/node-glob
+ */
+
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var sass = require('gulp-sass');
