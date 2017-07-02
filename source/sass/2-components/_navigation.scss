@@ -73,23 +73,23 @@ $link-border: 3px;
 }
 
 
-// test min and max -> mq from min and till max value
-@include media-query(min, phone, max, tablet) {
-  .main-nav {
-    background-color: $ocean-red;
-  }
-}
-
-// // test max -> mq till max value
-@include media-query(max, phone) {
-  .main-nav {
-    background-color: $ocean-black;
-  }
-}
-
-// test max -> mq from min value
-@include media-query(min, tablet) {
-  .main-nav {
-    background-color: pink;
-  }
-}
+// // test min and max -> mq from min and till max value
+// @include media-query(min, phone, max, tablet) {
+//   .main-nav {
+//     background-color: $ocean-red;
+//   }
+// }
+//
+// // // test max -> mq till max value
+// @include media-query(max, phone) {
+//   .main-nav {
+//     background-color: $ocean-black;
+//   }
+// }
+//
+// // test max -> mq from min value
+// @include media-query(min, tablet) {
+//   .main-nav {
+//     background-color: pink;
+//   }
+// }
