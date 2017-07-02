@@ -25,11 +25,12 @@
 //   font-size: $base-font-size;
 // }
 
+// TODO move to search comp?
 %search-border {
   border-top: none;
   border-left: none;
   border-right: none;
-  border-bottom: rem(2px) solid $ocean-white;
+  border-bottom: rem(1px) solid $ocean-white;
   // border-width: rem(2px);
   // border-color: $ocean-white;
 
