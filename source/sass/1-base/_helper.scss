@@ -1,4 +1,6 @@
 
+// check mixin's at https://www.sassmeister.com/
+
 // breakpoint map
 $breakpoints: (
     "phone":        400px,
@@ -25,7 +27,7 @@ $breakpoints: (
 
     $breakpoint-max: $breakpoint-max - 1px;
 
-    @warn $type-min, $breakpoint-min, $type-max, $breakpoint-max;
+    // @warn $type-min, $breakpoint-min, $type-max, $breakpoint-max;
     @media only screen and (#{$type-min}-width: $breakpoint-min) and (#{$type-max}-width: $breakpoint-max) {
       @content;
     }
@@ -35,7 +37,7 @@ $breakpoints: (
     $type-min: $type-one;
     $breakpoint-min: map_get($breakpoints, $breakpoint-one);
 
-    @warn $type-min, $breakpoint-min;
+    // @warn $type-min, $breakpoint-min;
     @media only screen and (#{$type-min}-width: $breakpoint-min) {
       @content;
     }
@@ -45,10 +47,12 @@ $breakpoints: (
     $type-max: $type-one;
     $breakpoint-max: map_get($breakpoints, $breakpoint-one);
 
-    @warn $type-max, $breakpoint-max;
+    // @warn $type-max, $breakpoint-max;
     @media only screen and (#{$type-max}-width: $breakpoint-max) {
       @content;
     }
+  } @else {
+    @error "use mixin syntax like (min, breakpoint-min, max, breakpoint-max) or (min, breakpoint-min) or (max, breakpoint-max)";
   }
 }
 
