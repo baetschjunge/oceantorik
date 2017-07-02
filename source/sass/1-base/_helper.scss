@@ -74,13 +74,17 @@ $grid-width: rem(map-get($breakpoints, desktop));
 }
 // -------
 
-
-
 // calc rem from pixel mixin
 @mixin rem($sizeValue: 1.6) {
   font-size: ($sizeValue * 10) + px;
   font-size: $sizeValue + rem;
 }
+
+// border mixin
+//
+// @mixin border($top: none, $right: none, $bottom: none, $left: none, $width, $type: solid, $color, $radius) {
+//
+// }
 
 // mixin ti display images in retina res on retina displays
 @mixin retina-img($image, $width, $height) {
