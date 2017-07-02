@@ -144,3 +144,24 @@ $grid-width: rem(map-get($breakpoints, desktop));
   @return 90deg - $value;
 }
 // ----- end linear gradient mixin
+
+// placeholder mixin for forms
+@mixin input-placeholder {
+	&.placeholder { @content; }
+	&:-moz-placeholder { @content; }
+	&::-moz-placeholder { @content; }
+	&:-ms-input-placeholder { @content; }
+	&::-webkit-input-placeholder { @content; }
+}
+
+// font smoothing
+@mixin antialias {
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+// check mixins for usage
+// @ https://github.com/engageinteractive/core/blob/master/src/scss/utility/_mixins.scss
+// @ https://web-design-weekly.com/2013/05/12/handy-sass-mixins/
